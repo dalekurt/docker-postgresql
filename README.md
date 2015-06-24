@@ -6,16 +6,16 @@ A Dockerfile that produces a Docker Image for [PostgreSQL](http://www.postgresql
 
 The `master` branch currently hosts PostgreSQL 9.3.
 
-Different versions of PostgreSQL are located at the github repo [branches](https://github.com/frodenas/docker-postgresql/branches).
+Different versions of PostgreSQL are located at the github repo [branches](https://github.com/dalekurt/docker-postgresql/branches).
 
 ## Usage
 
 ### Build the image
 
-To create the image `frodenas/postgresql`, execute the following command on the `docker-postgresql` folder:
+To create the image `dalekurt/postgresql`, execute the following command on the `docker-postgresql` folder:
 
 ```
-$ docker build -t frodenas/postgresql .
+$ docker build -t dalekurt/postgresql .
 ```
 
 ### Run the image
@@ -23,7 +23,7 @@ $ docker build -t frodenas/postgresql .
 To run the image and bind to host port 5432:
 
 ```
-$ docker run -d --name postgresql -p 5432:5432 frodenas/postgresql
+$ docker run -d --name postgresql -p 5432:5432 dalekurt/postgresql
 ```
 
 The first time you run your container, a new user `pgadmin` with all privileges will be created with a random password.
@@ -58,7 +58,7 @@ $ docker run -d \
     -p 5432:5432 \
     -e POSTGRES_USERNAME=myuser \
     -e POSTGRES_PASSWORD=mypassword \
-    frodenas/postgresql
+    dalekurt/postgresql
 ```
 
 #### Databases
@@ -78,7 +78,7 @@ $ docker run -d \
     -e POSTGRES_PASSWORD=mypassword \
     -e POSTGRES_DBNAME=mydb \
     -e POSTGRES_EXTENSIONS=citext \
-    frodenas/postgresql
+    dalekurt/postgresql
 ```
 
 #### Persist database data
@@ -92,7 +92,7 @@ $ docker run -d \
     --name postgresql \
     -p 5432:5432 \
     -v /tmp/postgresql:/data \
-    frodenas/postgresql
+    dalekurt/postgresql
 ```
 
 ## Copyright
