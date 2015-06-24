@@ -1,5 +1,5 @@
-FROM frodenas/ubuntu
-MAINTAINER Ferran Rodenas <frodenas@gmail.com>
+FROM stackbrew/ubuntu:14.04
+MAINTAINER Dale-Kurt Murray "dalekurt.murray@gmail.com"
 
 # Install PostgreSQL 9.3
 RUN DEBIAN_FRONTEND=noninteractive \
